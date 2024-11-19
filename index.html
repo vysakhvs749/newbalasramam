@@ -30,6 +30,156 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+
+        .lightbox {
+        z-index:1021;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(0, 0, 0, .5);
+        
+        }
+        .toolbarLB {
+          text-align: right;
+          padding: 3px;
+        }
+        .closeLB {
+          color: #000;
+            cursor: pointer;
+            border: 2px solid black;
+            padding: 0.3% 1.3%;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .lightbox .iframeContainer {
+          vertical-align: middle;
+          background: #fff;
+          padding: 2px;
+          width:600px;
+          padding-left:2%;
+          padding-right:2%;
+          border-radius: 18px;
+        }
+        
+        .lightbox p{
+            font-size: 12px;
+            text-align: center;
+            margin: 10px 0;
+            line-height: 20px;
+        }
+        .lightbox li{
+            font-size: 12px;
+            text-align: justify;
+            margin: 10px 0;
+            line-height: 20px;
+        }
+        .lightbox.closed {
+          display: none;
+        }
+        
+        .newth{
+           animation: Color 4s linear infinite;
+          -webkit-animation: Color 4s ease-in-out infinite;
+          text-shadow: 10px 10px #F0F0F0;
+        }
+        
+        @keyframes Color{
+          0%{
+            color:#A0D468;
+          }
+        
+          20%{
+            color:#4FC1E9;
+          }
+        
+          40%{
+            color:#FFCE54;
+          }
+        
+          60%{
+            color:#FC6E51;
+          }
+        
+          80%{
+            color:#ED5565;
+          }
+        
+          100%{
+            color:#AC92EC;
+          }
+        }
+        
+        @-moz-keyframes Color{
+          0%{
+            color:#A0D468;
+          }
+        
+          20%{
+            color:#4FC1E9;
+          }
+        
+          40%{
+            color:#FFCE54;
+          }
+        
+          60%{
+            color:#FC6E51;
+          }
+        
+          80%{
+            color:#ED5565;
+          }
+        
+          100%{
+            color:#AC92EC;
+          }
+        }
+        
+        @-webkit-keyframes Color{
+          0%{
+            color:#A0D468;
+          }
+        
+          20%{
+            color:#4FC1E9;
+          }
+        
+          40%{
+            color:#FFCE54;
+          }
+        
+          60%{
+            color:#FC6E51;
+          }
+        
+          80%{
+            color:#ED5565;
+          }
+        
+          100%{
+            color:#AC92EC;
+          }
+        }
+        
+        .newtp{
+        color: #ee4d06 !important;
+            font-size: 16px !important;
+        }
+        .newtpp{
+        color: blue !important;
+            font-size: 16px !important;
+        }
+        .bgs{
+            background: linear-gradient(rgb(15 66 41 / 21%), rgb(15 66 41 / 22%)), url(../img/orange.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        </style>
 </head>
 
 <body>
@@ -71,7 +221,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <!-- <h1 class="m-0">Gardener</h1> -->
-            <img class="img-fluid rounded"  src="img/logob2.png" width="17%">
+            <img class="img-fluid rounded"  src="img/logob21.png" width="22%">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -81,7 +231,7 @@
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="#" class="nav-item nav-link">About</a>
                 <a href="#" class="nav-item nav-link">Services</a>
-                <a href="#" class="nav-item nav-link">Our Team</a>
+                <a href="#" class="nav-item nav-link">Team</a>
                 <a href="#" class="nav-item nav-link">News & Events</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
@@ -95,11 +245,55 @@
                 </div>
                 <a href="#" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Donate Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Donate<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
 
+        
+          <div class="lightbox ">
+          <div class="iframeContainer pt-3 pb-3">
+            <div class="toolbarLB">
+              <span class="closeLB" onclick="lightBoxClose()">x</span>
+            </div>
+              <h3 class="newth">Donate Us</h3>
+        
+                 <p class="newtp">Every contribution, big or small, helps us provide a happy and healthy life to our children</p>
+        
+              <div class="container page-header2">
+                  <div class="row">
+                      <div class="col-md-1 col-sm-1"></div>
+                      <div class="col-md-5 col-sm-5">
+                          <a href="">
+            <img src="img/dhanaqr.jpg" width="100%">
+                  </a>
+                      <h6 style="color: #fff;">Dhanalaxmi Bank<br>
+        A/c : 008000100045085<br>
+        IFS Code : DLXB0000080</h6>
+                      </div>
+        <!--              <div class="col-md-2"></div>-->
+                      <div class="col-md-5 col-sm-5">
+                          <a href="https://thejrsons.com/">
+            <img src="img/punjabqr.jpg" width="100%">
+                  </a>
+                          <h6 style="color: #fff;">
+                              Punjab National Bank<br>
+        A/c : 4358000104026007<br>
+        IFS Code : PUNB0435800
+                          </h6>
+                      </div>
+                      <div class="col-md-1 col-sm-1"></div>
+                  </div>
+              </div>
+        
+        <h3 class="newth">Support Us</h3>
+              <p class="newtpp">"Lend a Hand, Light a Path – Volunteer with Sree Poornathrayeesha Balasramam to Transform Lives!"
+        </p>
+              <a href="/about/" class="btn btn-primary py-sm-2 px-sm-4">Are you interested</a>
+        <!--      <p class="newtp"></p>-->
+          </div>
+        </div>
+        
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -238,6 +432,26 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-end">
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-4 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <center><h3>Our Founder</h3></center>
+                    <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/founder.jpg">
+                    <center><h4>Late Prof. K.P. Narayanan Nair</h4></center>
+                </div>
+                <div class="col-lg-4"></div>
+                
+                
             </div>
         </div>
     </div>
@@ -633,11 +847,10 @@
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-bold text-primary">Our Team</p>
-                <!-- <h1 class="display-5 mb-5">Dedicated & Experienced Team Members</h1> -->
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -646,11 +859,7 @@
                         <div class="team-text">
                             <h6 class="mb-0">H.Capt.Krishnan kottayil</h6>
                             <p class="text-primary">President</p>
-                            <!-- <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
+                           
                         </div>
                     </div>
                 </div>
@@ -660,11 +869,6 @@
                         <div class="team-text">
                             <h6 class="mb-0">Sri.K.N.Devadas</h4>
                             <p class="text-primary">vice president</p>
-                            <!-- <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -674,11 +878,6 @@
                         <div class="team-text">
                             <h6 class="mb-0">Sri.M.R.Krishnakumar</h6>
                             <p class="text-primary">secretary</p>
-                            <!-- <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -689,17 +888,12 @@
                             <h6 class="mb-0">Sri.K.V.Sathyan</h6>
                             <p class="text-primary">joint secretary
                             </p>
-                            <!-- <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
 
